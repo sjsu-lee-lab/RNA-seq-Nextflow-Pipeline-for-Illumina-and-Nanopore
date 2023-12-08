@@ -1,0 +1,22 @@
+name: r-rnaseq
+channels:
+  - conda-forge
+  - bioconda
+  - r
+  - defaults
+  - conda-forge/label/broken
+dependencies:
+  - r-base=4.2
+  - r-optparse
+  - r-ggplot2
+  - r-ggrepel
+  - r-dplyr
+  - r-tidyr
+  - r-ashr
+  - r-pheatmap
+  - r-rcolorbrewer
+  - r-tibble
+  - r-gridextra
+  - r-msigdbr
+  - bioconductor-deseq2
+  - bioconductor-fgsea

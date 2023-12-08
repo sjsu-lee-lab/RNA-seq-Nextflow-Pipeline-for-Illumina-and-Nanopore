@@ -1,0 +1,12 @@
+name: py-rnaseq
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  - conda-forge/label/broken
+dependencies:
+  - python=3.12.0
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
