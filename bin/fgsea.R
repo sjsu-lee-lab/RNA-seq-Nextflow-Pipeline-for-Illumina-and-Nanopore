@@ -14,8 +14,8 @@ fgsea_results <- function(ranks, gene_set, set_names, nperm){
 	#Run fgsea
 	res <- fgsea(gene_list, ranks, minSize=15, maxSize=500, nPermSimple = nperm)
 	#Plot enrichment table
-	topUp <- res %>% filter(ES > 0) %>% arrange(padj) %>% head(n=10)
-	topDown <- res %>% filter(ES < 0) %>% arrange(padj) %>% head(n=10)
+	topUp <- res %>% filter(padj < 0.25) %>% filter(ES > 0) %>% arrange(padj) %>% head(n=10)
+	topDown <- res %>% filter(padj < 0.25) %>% filter(ES < 0) %>% arrange(padj) %>% head(n=10)
 	top <- bind_rows(topUp, topDown) %>% arrange(-NES)
     ttl <- paste(as.character(gene_set$gs_cat[1]), "_top_pathways.csv", sep = "")
 	top_paths <- top[,-c(2:8)]
