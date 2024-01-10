@@ -96,7 +96,7 @@ Illumina
 Similarly, Nanopore results are stored in `RNASeq_results/Nanopore` with `DESeq2`, `FGSEA`, and `MultiQC` sub-directories having the same content:
 
 ```
-Illumina
+Nanopore
 ├── CHOPPER
 ├── DESeq2
 ├── Duplicates
@@ -134,8 +134,8 @@ Optional arguments:
 ```
 
 ## Resources
-Since the input data are part of a private research, their file paths are left empty in [`nextflow.config`](nextflow.config). Make sure you declare them from the command line using their corresponding parameters when running the pipeline.
+Since the input data are part of a private research, their file paths are left empty in [`nextflow.config`](nextflow.config). The same thing goes to the paths of the genome and annotation files. Make sure you declare them from the command line using their corresponding parameters when running the pipeline. You can also add the file paths to their rescpective parameters directly in [`nextflow.config`](nextflow.config) before running the pipeline.
 
-The custom R scripts for DESeq2 and FGSEA and the python script for the heatmaps are placed in the [`bin`](bin/) directory. Specifically, DESeq.R was written while taking into account the project's sample's names. You might want to consider modifying the part that parses the sample's names (lines 23-25, 32-38) to match your samples.
+As for the custom scripts, the R scripts for DESeq2 and FGSEA and the python script for the heatmaps are placed in the [`bin`](bin/) directory. Specifically, DESeq.R was written while taking into account the project's sample's names. You might want to consider modifying the part that parses the sample's names (lines 23-25, 32-38) to match your samples.
 
-The Conda environments used in this pipeline are specified in their respective YAML files in the [`envs`](envs/) directory
+The Conda environments used in this pipeline are specified in their respective YAML files in the [`envs`](envs/) directory.
