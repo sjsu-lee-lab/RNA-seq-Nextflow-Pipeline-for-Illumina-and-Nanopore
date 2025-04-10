@@ -56,7 +56,7 @@ nextflow run rnaseq.nf --help
 
 ## Output
 
-Illumina results are stored in Illumina directory under the parent output directory [`RNASeq_results`](RNASeq_results/) that is set with the `outdir` parameter as shown below. A timeline report, an execution report, and a DAG visualization are also generated for each run of the pipeline.
+Illumina results are stored in Illumina directory under the parent output directory `RNASeq_results` that is set with the `outdir` parameter as shown below. A timeline report, an execution report, and a DAG visualization are also generated for each run of the pipeline.
 
 ```
 Illumina
